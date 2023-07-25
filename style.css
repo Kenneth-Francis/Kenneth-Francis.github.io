@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: 'Raleway', sans-serif;
+
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+    
+    nav > .p1 {
+        flex: 1;
+        padding: 15px 0px 15px 30px;
+        background-color: #f2ccd5;
+        color: white;
+        font-size: 30px;
+    }
+    nav > .p1 > span {
+        color: #bc002d;
+    }
+    nav > .p2 {
+        flex: 1;
+        padding: 15px 0px 15px 30px;
+        background-color: #efbcc3;
+        color: white;
+        font-size: 30px;
+    }
+    nav > .p2 > span{
+        color: #c91F37;
+    }
+
+main {
+    
+}
+    main > div > .parallax {
+        background-image: -moz-element();
+    }
+    main > div > p {
+        font-size: 24px;
+    }
+
