@@ -3,46 +3,290 @@
     padding: 0px;
 }
 
-body {
-    background-color: lightgrey;
-    font-family: 'Raleway', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
 
-    
+body {
+    width: 100vw;
+    font-family: 'Raleway', sans-serif;  
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
+    position: fixed;
+    width: 100vw;
+    height: 4rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0rem .3rem 1rem -.5rem black;
 }
+    .nav-left {
+        flex: 5;
+        margin-left: 1.5rem;
+        font-size: 2rem;
+    }
+        .nav-left span {
+            color: #bc002d;
+        }
+
+    .nav-right {
+        flex: 2;
+        margin-right: 1rem;
+        gap: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .nav-right a {
+            padding: 1.25rem .5rem;
+            display: flex;
+            gap: .25rem;
+            align-items: center;
+            text-decoration: none;
+        }
+            .nav-right a:visited {
+                color: inherit;
+            }
+            .nav-right a:hover {
+                background-color: rgba(0, 0, 0, 0.75);
+                color: white;
+                cursor: pointer;
+            }
     
-    nav > .p1 {
-        flex: 1;
-        padding: 15px 0px 15px 30px;
-        background-color: #f2ccd5;
-        color: white;
-        font-size: 30px;
-    }
-    nav > .p1 > span {
-        color: #bc002d;
-    }
-    nav > .p2 {
-        flex: 1;
-        padding: 15px 0px 15px 30px;
-        background-color: #efbcc3;
-        color: white;
-        font-size: 30px;
-    }
-    nav > .p2 > span{
-        color: #c91F37;
-    }
 
 main {
-    
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
-    main > div > .parallax {
-        background-image: -moz-element();
+    .parallax-container {
+        background-image: url("Images/fujisan_autumn.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom: .25rem solid #f2ccd5;
+        height: 100vh;
     }
-    main > div > p {
-        font-size: 24px;
+        .main-title {
+            padding-top: 22rem;
+            height: 60vh;
+            text-align: center;
+            text-shadow: .25rem .25rem .33rem black;
+            font-family: 'Raleway Medium';
+            font-size: 6rem;
+            color: white;
+        }
+        .main-title span {
+            font-size: 5.5rem;
+            color: #bc002d;   
+        }
+
+    .sakura-gif {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 20vh;
+        margin: 0rem auto;
+        background-image: url("./Images/sakuraPetalsFalling.gif");
+        font-size: 4rem;
+    }
+        .sticky {
+            position: sticky;
+            top: 4.125rem;
+        }
+
+    .about-me-container {
+        display: flex;
+        flex-direction: column;
+    }
+        .about-me-title {
+            padding-top: 16rem;
+            margin: -16rem auto 4rem auto;
+            font-family: 'Raleway Medium';
+            font-size: 3.5rem;
+            color: #121212;
+            text-decoration-line: underline;
+            text-decoration-color: #bc002d;
+        }
+        .about-me-paragraph {
+            margin: 0 auto;
+            padding: 2rem;
+            width: 50vw;
+            font-family: "Open Sans",sans-serif;
+            font-size: 1.25rem;
+            box-shadow:
+                inset 0 -3rem 3rem rgba(0, 0, 0, 0.1),
+                0 0 0 2px rgb(255, 255, 255),
+                0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.3);
+        }
+    .sakura-branch {
+        background-image: url("./Images/sakuraBranch.png");
+        background-attachment: fixed;
+        background-position: 0rem 5rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vh;
+        margin-top: 10rem;
+        border-top: .5rem solid #bc002d;
+        border-bottom: .5rem solid #bc002d;
+        box-shadow: 0rem .3rem 2rem -.5rem black;
     }
 
+    .my-portfolio-container {
+        display: flex;
+        flex-direction: column;
+    }
+        .my-portfolio-title {
+            padding-top: 16rem;
+            margin: -4rem auto 4rem auto;
+            font-family: 'Raleway Medium';
+            font-size: 3.5rem;
+            color: #121212;
+            text-decoration-line: underline;
+            text-decoration-color: #bc002d;
+        }
+
+        .project-container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+            .top-row, .bottom-row {
+                display: flex;
+                gap: 1rem;
+            }
+                .project-1-container, .project-2-container, .project-3-container, .project-4-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    align-items: center;
+                    overflow: hidden;
+                    gap: 3.5rem;
+                }
+                .project-1-container, .project-4-container {
+                    height: 30rem;
+                    width: 60rem;
+                    background-color: #f2ccd5;
+                }
+                .project-2-container, .project-3-container {
+                    height: 30rem;
+                    width: 60rem;
+                    background-color: #670019;
+                }
+                    .project-header {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: .5rem;
+                    }
+                        .project-title {
+                            font-family: 'Raleway Medium';
+                            font-size: 2rem;
+                            color: #121212;
+                        }
+                        .project-2-title, .project-3-title {
+                            color: white;
+                        }
+                    
+                        .project-tools {
+                            font-family: "Open Sans",sans-serif;
+                            font-size: 1.125rem;
+                            color: #121212;
+                        }
+                        .project-2-tools, .project-3-tools {
+                            color: white;
+                        }
+
+                    .my-portfolio-container img {
+                        height: 20rem;
+                        width: 45rem;
+                        margin-bottom: -1.5rem;
+                        border-radius: 1.25rem;
+                    }
+                    .project-1-container img, .project-4-container img {
+                        background-color: #363636;
+                    }
+                    .project-3-container img, .project-2-container img {
+                        background-color: #c9c9c9;
+                    }
+
+    .tori-gate {
+        background-image: url("./Images/tori_walkway.jpg");
+        background-attachment: fixed;
+        background-position: 0rem -20rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40vh;
+        margin: 10rem 0 12rem 0;
+        /* border-top: .5rem solid black; */
+        /* border-bottom: .5rem solid black; */
+        box-shadow: 0rem .3rem 2rem -.5rem black;
+    }
+
+    .contact-me-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+    }
+        .contact-me-title {
+            padding-top: 16rem;
+            margin: -16rem auto 4rem auto;
+            font-family: 'Raleway Medium';
+            font-size: 3.5rem;
+            color: #121212;
+            text-decoration-line: underline;
+            text-decoration-color: #bc002d;
+        }
+        .contact-me-container img {
+            height: 25rem;
+            width: 25rem;
+            border-radius: 25rem;
+        }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+    background-color: #550014;
+    color: white;
+
+    font-family: "Open Sans",sans-serif;
+    font-size: 1.25rem;
+}
+
+
+/* Global Classes */
+
+/* .vw-center {
+    margin: 0 auto;
+} */
+
+.bg-white {
+    background-color: white;
+}
+.bg-rose {
+    background-color: #f2ccd5;
+}
+
+.font-white {
+    color: white;
+}
+.font-rose {
+    color: #f2ccd5;
+}
+.font-red {
+    color: #bc002d;
+}
+
+.font-bold {
+    font-weight: bold;
+}
